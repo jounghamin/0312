@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      border-radius: 0%;
+      padding: 10px 10px 10px 10px;
+      margin: 10px ;
+    }
+    .text-horizontal {
+      text-align: center;
+    }
+    .text-vertical {
+      line-height: 100px;
+    }
+    .grid {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+}
+div > div {
+  padding: 100px;
+  background-color: #ccc;
+}
+    
+.vertical {
+      align-items: center;
+    }
+    
+    .center {
+      justify-content: left;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">content</div>
+
+  <hr>
+  <div class='container text-horizontal text-vertical' >content</div>
+  <hr>
+  <div class="container grid"></div>
+  <div class="grid">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>  
+  </div>
+    <br>
+    <div class ='container center'> </div>
+    <div class ='container center'> </div>    
+    <div class ='container center'> </div>
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 150px;
+      height: 150px;
+      border: 1px solid black;
+      box-sizing: border-box;
+      margin: 1rem 1rem 1rem 1rem;
+    }
+
+    .padding-box{
+      padding: 1rem;
+    }
+
+    .hr{
+      margin: 1rem 0 1rem 0;
+    }
+
+    .text-center{
+      text-align: center;
+      line-height: 150px;
+    }
+
+    .box-center{
+      margin: 0 auto 0 auto;
+    }
+    
+    .container{
+      display: flex;
+    }
+
+    .space-between{
+      justify-content: space-between;
+    }
+    .big-container{
+      border: 1px solid black;
+      padding: 1rem;
+      width: 600px;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box padding-box">
+    content
+  </div>
+  <hr class="hr">
+  <div class="box text-center">
+    content
+  </div>
+  <hr class="hr">
+  <div class="box box-center"></div>
+  <hr class="hr">
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <hr class="hr">
+  <div class="container space-between">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <hr>
+  <div class ='big-container'>
+    <div>
+      <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </div>  
+  <hr>
+  <div class = 'container space-between'>
+    <div class = 'box'></div>
+    <div class="container">
+      <div class = 'box'></div>
+      <div class = 'box'></div>
+    </div>
+  </div>
+
+</body>
+</html>
