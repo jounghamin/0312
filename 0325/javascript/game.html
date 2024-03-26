@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dice Game</title>
+</head>
+<body>
+  <h1>주사위 게임</h1>
+  <p>1부터 6까지의 숫자를 맞혀보세요!</p>
+  <input type="number" id="guess" min="1" max="6">
+  <button onclick="playGame()">게임 시작</button>
+  <p id="result"></p>
+
+  <script>
+    function playGame() {
+      const guessInput = document.getElementById('guess');
+      const resultText = document.getElementById('result');
+      
+      const userGuess = parseInt(guessInput.value);
+      const diceNumber = Math.floor(Math.random() * 6) + 1;
+
+      if (userGuess >= 1 && userGuess <= 6) {
+        if (userGuess === diceNumber) {
+          resultText.textContent = '정답!';
+        } else {
+          resultText.textContent = '틀렸습니다! 정답은 ' + diceNumber + '입니다.';
+        }
+      } else {
+        resultText.textContent = '1부터 6까지의 숫자를 입력해주세요.';
+      }
+    }
+  </script>
+</body>
+</html>

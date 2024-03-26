@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div>hello world!</div>
+
+</body>
+<script>
+  const div = document.querySelector('div');
+  div.addEventListener('click', () => {
+    div.classList.toggle('red');
+  });
+  // div.addEventListener('click', (event) => {
+  //   div.classList.toggle('red');
+  //   console.log(event);
+  //   console.log(event.target);
+  // });
+</script>
+  </body>
+</html>

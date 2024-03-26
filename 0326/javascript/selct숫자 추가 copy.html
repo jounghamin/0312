@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    .red {
+      color: red;
+    }
+    .box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+  }
+  </style>
+  
+</head>
+
+<body>
+  <div>0</div>
+  <button>버튼</button>
+  <div class="box"></div>
+  <!-- <h1>what color am I</h1>
+  <input type="text"> -->
+  <h1 id="colorText">what color am I</h1>
+  <input type="text" id="colorInput">
+
+</body>
+<script>
+  const button = document.querySelector('button')
+  const counter = document.querySelector('div');
+
+  button.addEventListener('click', () => {
+    let currentValue = Number(counter.innerText);
+    currentValue++;
+    counter.innerText = currentValue;
+  });
+
+const box = document.querySelector('.box');
+
+box.addEventListener('mouseover', () => {
+  box.style.backgroundColor = 'green';
+});
+
+box.addEventListener('mouseout', () => {
+  box.style.backgroundColor = 'black';
+});
+
+// const inputTag = document.querySelector('input')
+// inputTag.addEventListener('input',(event)=>{
+//   console.log(event.target.value)
+
+// })
+const colorInput = document.querySelector('#colorInput');
+    const colorText = document.querySelector('#colorText');
+
+    colorInput.addEventListener('input', (event) => {
+      const colorName = event.target.value;
+      colorText.style.color = colorName;
+    });
+</script>
+  </body>
+</html>

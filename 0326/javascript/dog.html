@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+  <img src="" alt="강아지 사진">
+  <button>클릭!</button>
+  
+  <script>
+    const URL = 'https://dog.ceo/api/breeds/image/random' 
+    //버튼을 누른다 -> 강아지 사진 
+    //버튼을 누면 dog api 로 요청
+      // 버튼을 누르는 event 에 대해 fuction 을 정의한다.
+        // 버튼을 선택한다.  
+      // function 내부에서 dog api 로 요청을 보낸다. 
+    //온 요청을 바탕으로 img 로 보여준다.
+    
+    const button = document.querySelector('button')
+    const imageTag =document.querySelector('img')
+    button.addEventListener('click', () => {
+      axios({url:URL}) 
+        .then(response=> {
+          const imgUrl = response.data.message
+          imageTag.src =imgUrl
+        })
+    })
+  </script>
+</body>
+</html>

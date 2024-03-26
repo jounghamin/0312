@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guessing Game</title>
+</head>
+<body>
+  <h1>숫자 맞추기 게임</h1>
+  <p>1부터 100 사이의 숫자 중 하나를 맞춰보세요!</p>
+  <input type="number" id="userGuess" min="1" max="100">
+  <button onclick="checkGuess()">확인</button>
+  <p id="hint"></p>
+
+  <script>
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const userGuessInput = document.getElementById('userGuess');
+      const hintText = document.getElementById('hint');
+
+      const userGuess = parseInt(userGuessInput.value);
+
+      if (userGuess >= 1 && userGuess <= 100) {
+        attempts++;
+
+        if (userGuess === randomNumber) {
+          hintText.textContent = '축하합니다! ' + attempts + '번만에 숫자를 맞추셨습니다!';
+        } else if (userGuess < randomNumber) {
+          hintText.textContent = '숫자가 작습니다. 다시 시도해보세요.';
+        } else {
+          hintText.textContent = '숫자가 큽니다. 다시 시도해보세요.';
+        }
+      } else {
+        hintText.textContent = '1부터 100 사이의 숫자를 입력해주세요.';
+      }
+    }
+  </script>
+</body>
+</html>

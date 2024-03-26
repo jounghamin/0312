@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+  <div>0</div>
+  <button>버튼</button>
+
+</body>
+<script>
+  const button = document.querySelector('button')
+  const counter = document.querySelector('div');
+  let number = 0
+
+  button.addEventListener('click', () => {
+    number = number + 1 
+    counter.innerText = number
+  });
+
+</script>
+  </body>
+</html>
